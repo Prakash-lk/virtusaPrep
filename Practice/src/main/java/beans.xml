@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+   	<bean id="b1" class="samples.Book">
+   		<property name="bookId" value="111"> </property>
+   		<property name="bookName" value="java"></property>
+   		</bean>
+   		
+   		<bean id="b2" class="samples.Book">
+   		<property name="bookId" value="112"> </property>
+   		<property name="bookName" value="javaEE"></property>
+   	</bean>
+   	<bean id="b3" class="samples.Book">
+   		<property name="bookId" value="113"> </property>
+   		<property name="bookName" value="html"></property>
+   	</bean>
+   	<bean id="b4" class="samples.Book">
+   		<property name="bookId" value="114"> </property>
+   		<property name="bookName" value="css"></property>
+   	</bean>
+   	
+   	 	<bean id="lan" class="samples.BookCollection">
+   		<property name="bookList">
+   			<list>
+   				 <ref bean="b1"></ref>
+   				 <ref bean="b2"></ref>
+   			</list>
+   		</property>
+   		 
+   		</bean>
+   		
+   		<bean id="front" class="samples.BookCollection">
+   		<property name="bookList">
+   			<list>
+   				 <ref bean="b3"></ref>
+   				 <ref bean="b4"></ref>
+   			</list>
+   		</property>
+   		 
+   		</bean>
+   		
+   		<bean id="bl1" class="samples.BookLibrary">
+   		<property name="allBooks" value="#{front.bookList}">
+   			 
+   		</property>   
+   		<property name="getFristBook" value="#{front.getfirstBook()}"></property>
+   		</bean>
+   		<bean id="bl2" class="samples.BookLibrary">
+   		<property name="allBooks" value="#{lan.bookList}">
+   			 
+   		</property>   
+   		<property name="getFristBook" value="#{lan.getfirstBook()}"></property>
+   		</bean>
+   		
+   		
+   		 
+</beans>
