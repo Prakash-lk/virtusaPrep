@@ -5,3 +5,19 @@
               -> Click right click on project and place a curser on Buildpath then Click Config build path.
               -> There will be some Folders which marked as Missing(Select them).
               -> Afterthat select the jre folder and click apply. 
+2. Any error occured in POM.xml when Creating project
+              ->we want to add some plugins
+                        <plugins>
+                          <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-war-plugin</artifactId>
+                            <version>3.3.1</version>
+                          </plugin>
+                          <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>3.8.1</version>
+                          </plugin>
+                        </plugins>
+              
+              ->Add this code inside of the build tag and save the file. if the error wasn't cleared then update maven project.          
