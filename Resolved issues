@@ -3,4 +3,5 @@
 1. If any folders are not available in project
 
               -> Click right click on project and place a curser on Buildpath then Click Config build path.
-              -> There will be Folders which Catogorized with Missing.
+              -> There will be some Folders which marked as Missing(Select them).
+              -> Afterthat select the jre folder and click apply. 
