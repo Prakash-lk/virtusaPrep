@@ -1,0 +1,6 @@
+# virtusaPrep
+
+1. If any folders are not available in project
+
+              -> Click right click on project and place a curser on Buildpath then Click Config build path.
+              -> There will be Folders which Catogorized with Missing.
