@@ -10,6 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloWorldController {
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView welcomeMsg() {
-		return new ModelAndView("welcome","msg","Hello Buddy !!!");
+		return new ModelAndView("welcome","msg","Hey Buddy !!!");
 	}
 }
